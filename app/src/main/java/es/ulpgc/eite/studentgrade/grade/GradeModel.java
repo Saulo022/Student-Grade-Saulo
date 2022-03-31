@@ -8,6 +8,7 @@ public class GradeModel implements GradeContract.Model {
   public static String TAG = "StudentGrade.GradeModel";
 
   private String data;
+  private int btnClicked;
 
   public GradeModel(String data) {
     this.data = data;
@@ -33,4 +34,5 @@ public class GradeModel implements GradeContract.Model {
 
     // TODO: include code here if is necessary
   }
+
 }

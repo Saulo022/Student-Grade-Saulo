@@ -36,6 +36,7 @@ public class StudentPresenter implements StudentContract.Presenter {
     state.notasAltasEnable = true;
     state.notasMediasEnable = true;
     state.notasBajasEnable = true;
+    state.btnClicked =0;
 
     view.get().onDataUpdated(state);
   }
@@ -89,9 +90,14 @@ public class StudentPresenter implements StudentContract.Presenter {
 
   @Override
   public void onOutstandingGradeBtnClicked() {
-
+    Log.e(TAG, "onOutstandingGradeBtnClicked()");
     // TODO: include code here if is necessary
 
+    state.notasAltasCLicked = true;
+    state.btnClicked = 1;
+    StudentToGradeState newState = new StudentToGradeState(state.btnClicked);
+    passStateToNextScreen(newState);
+    view.get().navigateToNextScreen();
   }
 
   @Override
@@ -99,6 +105,11 @@ public class StudentPresenter implements StudentContract.Presenter {
 
     // TODO: include code here if is necessary
 
+    state.notasMediasCLicked = true;
+    state.btnClicked = 2;
+    StudentToGradeState newState = new StudentToGradeState(state.btnClicked);
+    passStateToNextScreen(newState);
+    view.get().navigateToNextScreen();
   }
 
   @Override
@@ -106,6 +117,11 @@ public class StudentPresenter implements StudentContract.Presenter {
 
     // TODO: include code here if is necessary
 
+    state.notasBajasCLicked = true;
+    state.btnClicked = 3;
+    StudentToGradeState newState = new StudentToGradeState(state.btnClicked);
+    passStateToNextScreen(newState);
+    view.get().navigateToNextScreen();
   }
 
   private GradeToStudentState getStateFromNextScreen() {

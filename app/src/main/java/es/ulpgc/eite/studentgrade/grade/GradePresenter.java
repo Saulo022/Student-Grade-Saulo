@@ -1,5 +1,7 @@
 package es.ulpgc.eite.studentgrade.grade;
 
+import android.util.Log;
+
 import java.lang.ref.WeakReference;
 
 import es.ulpgc.eite.studentgrade.app.AppMediator;
@@ -25,7 +27,7 @@ public class GradePresenter implements GradeContract.Presenter {
 
   @Override
   public void onStart() {
-    // Log.e(TAG, "onStart()");
+     Log.e(TAG, "onStart()");
 
     // TODO: include code here if is necessary
 
@@ -34,11 +36,22 @@ public class GradePresenter implements GradeContract.Presenter {
     if (savedState != null) {
 
       // TODO: include code here if is necessary
+      state.btnStudentClicked = savedState.btnClicked;
+      if(state.btnStudentClicked==1){
+        state.nota1 = String.valueOf(9);
+        state.nota2 = String.valueOf(10);
+      } else if (state.btnStudentClicked==2){
+        state.nota1 = String.valueOf(7);
+        state.nota2 = String.valueOf(8);
+      } else if (state.btnStudentClicked==3){
+        state.nota1 = String.valueOf(5);
+        state.nota2 = String.valueOf(6);
+      }
 
     }
 
     // TODO: include code here if is necessary
-
+      view.get().onDataUpdated(state);
   }
 
   @Override

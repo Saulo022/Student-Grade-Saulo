@@ -7,4 +7,7 @@ public class GradeViewModel {
 
   // put the view state here
   public String data;
+  public int btnStudentClicked;
+  public String nota1;
+  public String nota2;
 }

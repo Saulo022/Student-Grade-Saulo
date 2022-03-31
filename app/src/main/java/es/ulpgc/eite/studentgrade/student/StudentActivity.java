@@ -92,9 +92,9 @@ public class StudentActivity
 
     // deal with the data
     ((TextView) findViewById(R.id.tvStudentGrade)).setText(viewModel.studentGrade);
-    ((TextView) findViewById(R.id.btnOutstandingGrade)).setText(viewModel.studentGrade);
-    ((TextView) findViewById(R.id.btnMentionGrade)).setText(viewModel.studentGrade);
-    ((TextView) findViewById(R.id.btnPassGrade)).setText(viewModel.studentGrade);
+    //((TextView) findViewById(R.id.btnOutstandingGrade)).setText(viewModel.studentGrade);
+    //((TextView) findViewById(R.id.btnMentionGrade)).setText(viewModel.studentGrade);
+    //((TextView) findViewById(R.id.btnPassGrade)).setText(viewModel.studentGrade);
 
     findViewById(R.id.btnOutstandingGrade).setEnabled(viewModel.notasAltasEnable);
     findViewById(R.id.btnMentionGrade).setEnabled(viewModel.notasMediasEnable);

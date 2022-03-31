@@ -87,9 +87,11 @@ public class GradeActivity
     Log.e(TAG, "onDataUpdated()");
 
     // deal with the data
-    String[] data = viewModel.data.split(",");
-    ((TextView) findViewById(R.id.btnLowerGrade)).setText(data[0]);
-    ((TextView) findViewById(R.id.btnHigherGrade)).setText(data[1]);
+    //String[] data = viewModel.data.split(",");
+    ((TextView) findViewById(R.id.btnLowerGrade)).setText(viewModel.nota1);
+    ((TextView) findViewById(R.id.btnHigherGrade)).setText(viewModel.nota2);
+
+
   }
 
   @Override

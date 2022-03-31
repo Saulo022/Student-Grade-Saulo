@@ -5,5 +5,7 @@ package es.ulpgc.eite.studentgrade.app;
  */
 public class StudentToGradeState {
 
-  public String data;
+  public int btnClicked;
+
+public StudentToGradeState(int btnClicked){this.btnClicked=btnClicked;}
 }

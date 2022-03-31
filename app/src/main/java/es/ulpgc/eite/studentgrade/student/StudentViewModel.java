@@ -11,8 +11,9 @@ public class StudentViewModel {
   public boolean notasBajasEnable;
 
   public String studentGrade;
+  public int btnClicked;
 
-  public boolean notasAltasCLicked;
-  public boolean notasMediasCLicked;
-  public boolean notasBajasCLicked;
+  public boolean notasAltasCLicked = false;
+  public boolean notasMediasCLicked = false;
+  public boolean notasBajasCLicked = false;
 }

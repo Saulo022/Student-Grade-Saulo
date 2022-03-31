@@ -13,7 +13,7 @@ public class StudentModel implements StudentContract.Model {
   private String notasBajas;
 
   private int studentGrade;
-
+  private boolean btnClicked;
 
   public StudentModel(String data) {
     this.data = data;
@@ -59,4 +59,5 @@ public class StudentModel implements StudentContract.Model {
   public int getstudentGrade() {
     return studentGrade;
   }
+
 }
