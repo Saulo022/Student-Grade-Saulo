@@ -45,6 +45,11 @@ public interface StudentContract {
     void onDataFromNextScreen(String data);
 
     void onRestartScreen(String data);
+
+    String getnotasAltas();
+    String getnotasMedias();
+    String getnotasBajas();
+    int getstudentGrade();
   }
 
 }

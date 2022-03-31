@@ -6,5 +6,13 @@ package es.ulpgc.eite.studentgrade.student;
 public class StudentViewModel {
 
   // put the view state here
-  public String data;
+  public boolean notasAltasEnable;
+  public boolean notasMediasEnable;
+  public boolean notasBajasEnable;
+
+  public String studentGrade;
+
+  public boolean notasAltasCLicked;
+  public boolean notasMediasCLicked;
+  public boolean notasBajasCLicked;
 }

@@ -8,6 +8,12 @@ public class StudentModel implements StudentContract.Model {
   public static String TAG = "StudentGrade.StudentModel";
 
   private String data;
+  private String notasAltas;
+  private String notasMedias;
+  private String notasBajas;
+
+  private int studentGrade;
+
 
   public StudentModel(String data) {
     this.data = data;
@@ -34,4 +40,23 @@ public class StudentModel implements StudentContract.Model {
     // TODO: include code here if is necessary
   }
 
+  @Override
+  public String getnotasAltas() {
+    return notasAltas;
+  }
+
+  @Override
+  public String getnotasMedias() {
+    return notasMedias;
+  }
+
+  @Override
+  public String getnotasBajas() {
+    return notasBajas;
+  }
+
+  @Override
+  public int getstudentGrade() {
+    return studentGrade;
+  }
 }

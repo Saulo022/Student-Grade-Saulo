@@ -91,7 +91,14 @@ public class StudentActivity
     Log.e(TAG, "onDataUpdated()");
 
     // deal with the data
-    ((TextView) findViewById(R.id.tvStudentGrade)).setText(viewModel.data);
+    ((TextView) findViewById(R.id.tvStudentGrade)).setText(viewModel.studentGrade);
+    ((TextView) findViewById(R.id.btnOutstandingGrade)).setText(viewModel.studentGrade);
+    ((TextView) findViewById(R.id.btnMentionGrade)).setText(viewModel.studentGrade);
+    ((TextView) findViewById(R.id.btnPassGrade)).setText(viewModel.studentGrade);
+
+    findViewById(R.id.btnOutstandingGrade).setEnabled(viewModel.notasAltasEnable);
+    findViewById(R.id.btnMentionGrade).setEnabled(viewModel.notasMediasEnable);
+    findViewById(R.id.btnPassGrade).setEnabled(viewModel.notasBajasEnable);
   }
 
 

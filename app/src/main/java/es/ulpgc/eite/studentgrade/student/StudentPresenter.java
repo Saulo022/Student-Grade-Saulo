@@ -31,6 +31,13 @@ public class StudentPresenter implements StudentContract.Presenter {
 
     // TODO: include code here if is necessary
 
+    state.studentGrade = String.valueOf(model.getstudentGrade());
+
+    state.notasAltasEnable = true;
+    state.notasMediasEnable = true;
+    state.notasBajasEnable = true;
+
+    view.get().onDataUpdated(state);
   }
 
   @Override
