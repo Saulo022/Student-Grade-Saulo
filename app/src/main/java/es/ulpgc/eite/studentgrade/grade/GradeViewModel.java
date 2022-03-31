@@ -10,4 +10,10 @@ public class GradeViewModel {
   public int btnStudentClicked;
   public String nota1;
   public String nota2;
+
+  public int btnGradeClicked;
+  public int grade;
+
+  public boolean HigherGradeBtnClicke = false;
+  public boolean LowerGradeBtnClicked = false;
 }

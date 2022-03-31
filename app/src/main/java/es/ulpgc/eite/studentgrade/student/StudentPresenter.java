@@ -58,11 +58,11 @@ public class StudentPresenter implements StudentContract.Presenter {
     if (savedState != null) {
 
       // TODO: include code here if is necessary
-
+        state.studentGrade=String.valueOf(savedState.grade);
     }
 
     // TODO: include code here if is necessary
-
+    view.get().onDataUpdated(state);
   }
 
   @Override

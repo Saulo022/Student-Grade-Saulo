@@ -74,6 +74,9 @@ public class GradePresenter implements GradeContract.Presenter {
     // Log.e(TAG, "onBackPressed()");
 
     // TODO: include code here if is necessary
+
+    GradeToStudentState newState = new GradeToStudentState(state.grade);
+    passStateToPreviousScreen(newState);
   }
 
   @Override
@@ -95,14 +98,22 @@ public class GradePresenter implements GradeContract.Presenter {
   public void onHigherGradeBtnClicked() {
 
     // TODO: include code here if is necessary
-
+      state.btnGradeClicked=2 ;
+      state.HigherGradeBtnClicke=true;
+      model.setGrade(Integer.parseInt(state.nota2));
+    state.grade = model.getGrade();
+    view.get().navigateToPreviousScreen();
   }
 
   @Override
   public void onLowerGradeBtnClicked() {
 
     // TODO: include code here if is necessary
-
+        state.btnGradeClicked=1;
+        state.LowerGradeBtnClicked=true;
+        model.setGrade(Integer.parseInt(state.nota1));
+        state.grade = model.getGrade();
+    view.get().navigateToPreviousScreen();
   }
 
   private void passStateToPreviousScreen(GradeToStudentState state) {

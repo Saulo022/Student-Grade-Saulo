@@ -43,6 +43,9 @@ public interface GradeContract {
     void onRestartScreen(String data);
 
     void onDataFromPreviousScreen(String data);
+
+    int getGrade();
+    void setGrade(int grade1);
   }
 
 }

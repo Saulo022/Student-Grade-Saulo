@@ -9,6 +9,7 @@ public class GradeModel implements GradeContract.Model {
 
   private String data;
   private int btnClicked;
+  private int grade;
 
   public GradeModel(String data) {
     this.data = data;
@@ -16,7 +17,7 @@ public class GradeModel implements GradeContract.Model {
 
   @Override
   public String getStoredData() {
-    // Log.e(TAG, "getStoredData()");
+    // Log.e(TAG, "getStoredDgradeata()");
     return data;
   }
 
@@ -34,5 +35,10 @@ public class GradeModel implements GradeContract.Model {
 
     // TODO: include code here if is necessary
   }
+  @Override
+  public int getGrade(){return grade;}
 
+  public void setGrade(int grade1){
+      grade = grade1;
+  }
 }
